@@ -1,6 +1,15 @@
 # moment-demo
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
+## 报错：  Error: Action failed with "The process '/usr/bin/git' failed with exit code 128"
+解决方法：
+```bash
+解决方法：
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 添加写入权限
+```bash`
+增加写入权限
