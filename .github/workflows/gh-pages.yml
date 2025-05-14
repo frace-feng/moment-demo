@@ -8,11 +8,11 @@ on:
   # 这个选项可以使你手动在 Action tab 页面触发工作流
   # workflow_dispatch: true
 
-# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
 
 # 允许一个并发部署
 concurrency:
@@ -26,7 +26,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 添加写入权限
+        contents: read
+        pages: write
+        id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
