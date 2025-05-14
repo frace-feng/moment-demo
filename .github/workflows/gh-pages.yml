@@ -6,7 +6,7 @@ on:
       - master  # 这里要与你项目的主分支名称一致
 
   # 这个选项可以使你手动在 Action tab 页面触发工作流
-  workflow_dispatch: true
+  # workflow_dispatch: true
 
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
@@ -50,4 +50,5 @@ jobs:
           path: './dist'
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
