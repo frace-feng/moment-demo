@@ -3,6 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/moment-demo/',
+  base: '/https://github.com/frace-feng/moment-demo/',
   plugins: [vue()],
 })
